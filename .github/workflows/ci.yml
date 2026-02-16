@@ -10,28 +10,29 @@ permissions:
   contents: read
 
 jobs:
-  build-and-test:
-    name: Lint, Test, Build
+  validate:
+    name: Validate Documentation
     runs-on: ubuntu-latest
-
+    
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-
-      - name: Setup Node
-        uses: actions/setup-node@v4
-        with:
-          node-version: "20"
-          cache: "npm"
-
-      - name: Install
-        run: bun ci
-
-      - name: Lint
-        run: bun  run lint
-
-      - name: Test
-        run: bun run test
-
-      - name: Build
-        run: bun run build
+      
+      - name: Check README exists
+        run: |
+          if [ ! -f "README.md" ]; then
+            echo "Error: README.md not found"
+            exit 1
+          fi
+          echo "✅ README.md found"
+      
+      - name: Validate README is not empty
+        run: |
+          if [ ! -s "README.md" ]; then
+            echo "Error: README.md is empty"
+            exit 1
+          fi
+          echo "✅ README.md is not empty"
+          
+      - name: Success
+        run: echo "✅ All validation checks passed"

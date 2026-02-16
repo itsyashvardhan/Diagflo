@@ -13,8 +13,8 @@
   </p>
 
   <p>
-    <a href="https://github.com/PythonicBoat/Diagflow/actions/workflows/ci.yml">
-      <img src="https://img.shields.io/github/actions/workflow/status/PythonicBoat/Diagflow/ci.yml?branch=main&style=for-the-badge&label=CI" alt="CI Status" />
+    <a href="https://github.com/itsyashvardhan/Diagflo/actions/workflows/ci.yml">
+      <img src="https://img.shields.io/github/actions/workflow/status/itsyashvardhan/Diagflo/ci.yml?branch=main&style=for-the-badge&label=CI" alt="CI Status" />
     </a>
     <img src="https://img.shields.io/badge/Staging-Production-2ea44f?style=for-the-badge&logo=github" alt="live" />
     <img src="https://img.shields.io/badge/License-MIT-blue?style=for-the-badge" alt="MIT License" />
@@ -31,10 +31,10 @@
 
 <div align="center">
   <h3>Quick Actions</h3>
-  <a href="https://github.com/PythonicBoat/Diagflow/issues/new?template=bug_report.yml">
+  <a href="https://github.com/itsyashvardhan/Diagflo/issues/new?template=bug_report.yml">
     <img src="https://img.shields.io/badge/Open%20Issue-Bug%20Form-0969da?style=for-the-badge&logo=github" alt="Open Issue Form" />
   </a>
-  <a href="https://github.com/PythonicBoat/Diagflow/issues/new?template=feature_request.yml">
+  <a href="https://github.com/itsyashvardhan/Diagflo/issues/new?template=feature_request.yml">
     <img src="https://img.shields.io/badge/Request%20Feature-Structured%20Form-8250df?style=for-the-badge&logo=github" alt="Feature Request Form" />
   </a>
 </div>

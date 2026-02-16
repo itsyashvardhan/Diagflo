@@ -17,7 +17,7 @@
       <img src="https://img.shields.io/github/actions/workflow/status/itsyashvardhan/Diagflo/ci.yml?branch=main&style=for-the-badge&label=CI" alt="CI Status" />
     </a>
     <img src="https://img.shields.io/badge/Staging-Production-2ea44f?style=for-the-badge&logo=github" alt="live" />
-    <img src="https://img.shields.io/badge/License-MIT-blue?style=for-the-badge" alt="MIT License" />
+    <img src="https://img.shields.io/badge/License-PROPRIETARY-blue?style=for-the-badge" alt="proprietary" />
   </p>
   <p>
     <a href="https://diagflo.vercel.app/app">

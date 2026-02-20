@@ -44,7 +44,7 @@
 
 | Build | Quality | Delivery | Support |
 |:--:|:--:|:--:|:--:|
-| ![TypeScript](https://img.shields.io/badge/TypeScript-Strict-3178c6?style=flat-square&logo=typescript&logoColor=white) | ![Mermaid](https://img.shields.io/badge/Mermaid-11.12.2-ff3670?style=flat-square&logo=mermaid&logoColor=white) | ![Vercel](https://img.shields.io/badge/Deploy-Vercel-black?style=flat-square&logo=vercel) | ![Supabase](https://img.shields.io/badge/Backend-Supabase-3ecf8e?style=flat-square&logo=supabase&logoColor=white) |
+| ![TypeScript](https://img.shields.io/badge/TypeScript-Strict-3178c6?style=flat-square&logo=typescript&logoColor=white) | ![Mermaid](https://img.shields.io/badge/Mermaid-11.12.2-ff3670?style=flat-square&logo=mermaid&logoColor=white) | ![Vercel](https://img.shields.io/badge/Deploy-Vercel-black?style=flat-square&logo=vercel) | ![Neon](https://img.shields.io/badge/Backend-Neon-45CC2D?style=flat-square&logo=neon&logoColor=white) |
 | ![Vitest](https://img.shields.io/badge/Test-Vitest-6e9f18?style=flat-square&logo=vitest&logoColor=white) | ![ESLint](https://img.shields.io/badge/Lint-ESLint-4b32c3?style=flat-square&logo=eslint&logoColor=white) | ![SPA](https://img.shields.io/badge/App-SPA-111111?style=flat-square) | ![Issue Automation](https://img.shields.io/badge/Issues-Templated-0969da?style=flat-square&logo=github) |
 
 </div>

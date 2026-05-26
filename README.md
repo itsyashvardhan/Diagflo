@@ -14,7 +14,7 @@
     <img src="https://img.shields.io/badge/License-PROPRIETARY-blue?style=for-the-badge" alt="proprietary" />
   </p>
   <p>
-    <a href="https://diagflo.vercel.app/app">
+    <a href="https://diagflo.vercel.app/">
       <img src="https://img.shields.io/badge/Open%20App-Live%20Demo-ff6b35?style=flat-square&logo=vercel&logoColor=white" alt="Open App" />
     </a>
     <a href="https://diagflo.vercel.app/docs">
@@ -23,7 +23,7 @@
   </p>
 </div>
 
-<div align="center">
+<!-- <div align="center">
   <h3>Quick Actions</h3>
   <a href="https://github.com/itsyashvardhan/Diagflo/issues/new?template=bug_report.yml">
     <img src="https://img.shields.io/badge/Open%20Issue-Bug%20Form-0969da?style=for-the-badge&logo=github" alt="Open Issue Form" />
@@ -31,7 +31,7 @@
   <a href="https://github.com/itsyashvardhan/Diagflo/issues/new?template=feature_request.yml">
     <img src="https://img.shields.io/badge/Request%20Feature-Structured%20Form-8250df?style=for-the-badge&logo=github" alt="Feature Request Form" />
   </a>
-</div>
+</div> -->
 
 <br />
 <div align="center">

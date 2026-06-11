@@ -1,0 +1,137 @@
+# Diagflo — Full Documentation
+
+> The fastest way to visualize complex systems. Describe your architecture in any language, and let Archie handle the structure.
+
+Website: https://diagflo.yashvardhan.dev
+Repository: https://github.com/PythonicBoat/Diagflo
+
+---
+
+## Overview
+
+Diagflo is a client-side AI-powered diagram generation tool. Users provide their own Google Gemini API key, describe what they want to visualize in natural language, and the AI generates professional diagrams using Mermaid.js or Chart.js.
+
+No server-side processing of user data — all AI calls go directly from the browser to the Gemini API. The API key is stored in the browser's localStorage and never transmitted to Diagflo's servers.
+
+---
+
+## Supported Diagram Types
+
+### Mermaid.js Diagrams
+- **Flowcharts** — Process flows, decision trees, workflows
+- **Sequence Diagrams** — API interactions, message flows between services
+- **Class Diagrams** — OOP class hierarchies and relationships
+- **Entity-Relationship Diagrams** — Database schema visualization
+- **State Diagrams** — State machines and lifecycle flows
+- **Gantt Charts** — Project timelines and scheduling
+- **Pie Charts** — Data distribution visualization
+- **Mind Maps** — Brainstorming and concept mapping
+- **Git Graphs** — Branch and merge visualization
+- **User Journey** — User experience flow mapping
+
+### Chart.js Advanced Charts
+- **Line Charts** — With logarithmic scales, annotations, and reference lines
+- **Scatter Plots** — Data point visualization with labeled annotations
+- **Bar Charts** — Comparative data with custom styling
+- **Area Charts** — Trend visualization
+- All Chart.js charts support: log scales, point annotations, dashed reference lines, and custom color themes
+
+---
+
+## Key Features
+
+### AI Chat Interface
+The main interaction is a chat-based interface. Users type natural language prompts like:
+- "Show me a user authentication flow"
+- "Create an ER diagram for an e-commerce database"
+- "Draw a sequence diagram for OAuth 2.0"
+- "Make a performance comparison chart with ResNet vs MobileNet on a log-log scale"
+
+Archie interprets the prompt, selects the appropriate diagram type (Mermaid or Chart.js), and generates the visualization.
+
+### Image-to-Diagram
+Users can upload a photo (whiteboard sketch, hand-drawn diagram, screenshot) and Archie will convert it into an editable Mermaid diagram.
+
+### Iterative Refinement
+After generating a diagram, users can send follow-up messages to refine:
+- "Add error handling to the flow"
+- "Make it more detailed"
+- "Change the color scheme"
+- "Add a database connection step"
+
+### Export
+- **SVG** — Scalable vector export
+- **PNG** — Raster image export
+- **Code** — Copy raw Mermaid.js or Chart.js code
+
+### Sharing
+Generate a unique shareable URL for any diagram. Recipients can view the diagram without needing an API key. Share links use the format: `https://diagflo.yashvardhan.dev/d/{shareId}`
+
+### Conversation History
+Previous diagram conversations are saved locally in the browser and can be revisited.
+
+### Keyboard Shortcuts
+- `Ctrl+Enter` / `Cmd+Enter` — Send message
+- Standard text editing shortcuts in the prompt area
+
+---
+
+## Architecture
+
+```
+User Browser
+├── React SPA (Vite + TypeScript)
+│   ├── Chat Interface → Gemini API (direct, client-side)
+│   ├── Mermaid.js Renderer (flowcharts, sequences, ER, etc.)
+│   ├── Chart.js Renderer (advanced charts with annotations)
+│   └── Export Engine (SVG/PNG generation)
+├── localStorage (API key, conversation history, preferences)
+└── NeonDB (shareable diagram link storage only)
+```
+
+### Tech Stack
+| Layer | Technology |
+|-------|-----------|
+| Framework | React 18 + TypeScript |
+| Build Tool | Vite |
+| Styling | Tailwind CSS |
+| Diagrams | Mermaid.js |
+| Charts | Chart.js + chartjs-plugin-annotation |
+| AI | Google Gemini API |
+| Hosting | Vercel |
+| Share Storage | NeonDB |
+| Analytics | Vercel Analytics |
+
+---
+
+## Privacy & Security
+
+- **No server-side data processing**: All AI requests go directly from the user's browser to Google's Gemini API.
+- **API key storage**: Stored in browser localStorage only. Never sent to Diagflo servers.
+- **No telemetry on diagram content**: Diagflo does not log, store, or analyze user prompts or generated diagrams.
+- **Shareable links**: Only the Mermaid/Chart.js code is stored in NeonDB when the user explicitly creates a share link. No prompts or conversation history are shared.
+- **CSP enforced**: Content Security Policy headers restrict script/style/connect sources.
+
+---
+
+## Pages
+
+| Path | Description | Crawlable |
+|------|-------------|-----------|
+| `/` | Landing page — product overview, features, how it works | Yes |
+| `/docs` | Documentation — usage guide, supported types, shortcuts | Yes |
+| `/pricing` | Premium features overview | Yes |
+| `/privacy` | Privacy policy | Yes |
+| `/terms` | Terms of service | Yes |
+| `/app` | Diagram editor (requires API key) | No |
+| `/d/:shareId` | Shared diagram viewer | No |
+
+---
+
+## Author
+
+Built by **Yashvardhan** ([@itsyashvardhan](https://github.com/itsyashvardhan)).
+
+- GitHub: https://github.com/itsyashvardhan
+- X/Twitter: https://x.com/_yashvs
+- LinkedIn: https://linkedin.com/in/yashvardhan04

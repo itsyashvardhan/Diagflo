@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
+    <defs>
+    <linearGradient id="df-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stop-color="#f97316" />
+        <stop offset="50%" stop-color="#f59e0b" />
+        <stop offset="100%" stop-color="#fbbf24" />
+    </linearGradient>
+    <filter id="df-glow" x="-50%" y="-50%" width="200%" height="200%">
+        <feGaussianBlur stdDeviation="3" result="blur" />
+        <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+    </defs>
+    <g transform="scale(1.1) translate(-3,-3)">
+    <path d="M22 17 V47" stroke="url(#df-grad)" stroke-width="6" stroke-linecap="round" />
+    <path d="M22 17 H32 C43 17 47 25 47 32 C47 39 43 47 32 47 H22" stroke="url(#df-grad)" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" fill="none" />
+    <circle cx="47" cy="32" r="4" fill="url(#df-grad)" filter="url(#df-glow)" />
+    </g>
+</svg>

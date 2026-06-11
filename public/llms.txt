@@ -1,0 +1,47 @@
+# Diagflo
+
+> Diagflo is an AI-powered diagram generation tool. Describe your architecture, system design, or workflow in plain language and get a professional diagram in seconds.
+
+Diagflo is available at: https://diagflo.yashvardhan.dev
+
+## Features
+
+- **AI-Powered Generation**: Describe what you want in any language. Archie (the AI builder) generates Mermaid.js and Chart.js diagrams automatically.
+- **Supported Diagram Types**: Flowcharts, sequence diagrams, class diagrams, ER diagrams, state diagrams, Gantt charts, pie charts, mind maps, Git graphs, and advanced Chart.js visualizations (scatter, line, bar with log scales and annotations).
+- **Image-to-Diagram**: Upload a photo of a whiteboard sketch or hand-drawn diagram and convert it into a clean, editable diagram.
+- **Iterative Refinement**: Chat with Archie to refine your diagram with follow-up prompts.
+- **Export Options**: Export diagrams as SVG, PNG, or copy the raw Mermaid/Chart.js code.
+- **Shareable Links**: Generate a unique URL to share any diagram — no login required.
+- **Privacy First**: Your API key stays in your browser. Diagrams are generated client-side. No data stored on Diagflo's servers.
+- **Dark and Light Theme**: Full theme support across the entire application.
+- **Keyboard Shortcuts**: Power-user shortcuts for fast workflow.
+
+## How It Works
+
+1. Enter your Gemini API key (stored only in your browser's localStorage).
+2. Describe what you want to visualize in the chat prompt.
+3. Archie generates the diagram using Mermaid.js or Chart.js depending on the complexity.
+4. Refine with follow-up prompts, export, or share via link.
+
+## Tech Stack
+
+- **Frontend**: React, TypeScript, Vite, Tailwind CSS
+- **Diagram Rendering**: Mermaid.js, Chart.js
+- **AI**: Google Gemini API (user provides their own key)
+- **Hosting**: Vercel
+- **Sharing**: NeonDB (for shareable diagram links)
+
+## Pages
+
+- [Home](https://diagflo.yashvardhan.dev/) — Landing page with product overview
+- [App](https://diagflo.yashvardhan.dev/app) — The diagram editor (requires API key)
+- [Docs](https://diagflo.yashvardhan.dev/docs) — Full documentation and usage guide
+- [Pricing](https://diagflo.yashvardhan.dev/pricing) — Premium features overview
+
+## Documentation
+
+- [Full documentation](https://diagflo.yashvardhan.dev/llms-full.txt)
+
+## Author
+
+Built by [Yash Vardhan](https://github.com/itsyashvardhan).

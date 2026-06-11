@@ -1,0 +1,42 @@
+# Diagflo
+#
+# Diagflo is an AI-powered diagram generation tool. Describe your architecture,
+# system design, or workflow in plain language and get a professional diagram
+# in seconds.
+#
+# Website: https://diagflo.yashvardhan.dev
+#
+# Features:
+# - AI-Powered Generation (Mermaid.js + Chart.js)
+# - Supported: Flowcharts, sequence, class, ER, state, Gantt, pie, mind maps,
+#   Git graphs, scatter/line/bar with log scales and annotations
+# - Image-to-Diagram: Upload whiteboard sketches → clean editable diagrams
+# - Iterative Refinement: Chat with Archie to refine with follow-up prompts
+# - Export: SVG, PNG, or raw Mermaid/Chart.js code
+# - Shareable Links: Unique URL to share any diagram, no login required
+# - Privacy First: API key stays in browser, diagrams generated client-side
+# - Dark and Light Theme
+#
+# Tech Stack: React, TypeScript, Vite, Tailwind CSS, Mermaid.js, Chart.js,
+#             Google Gemini API, Vercel, NeonDB
+#
+# Pages:
+#   /         Landing page
+#   /docs     Documentation and usage guide
+#   /pricing  Premium features
+#   /privacy  Privacy policy
+#   /terms    Terms of service
+#   /app      Diagram editor (restricted)
+#   /d/:id    Shared diagram viewer (restricted)
+#
+# Full context: https://diagflo.yashvardhan.dev/llms.txt
+#             : https://diagflo.yashvardhan.dev/llms-full.txt
+#
+# Built by Yashvardhan — https://github.com/itsyashvardhan
+
+User-agent: *
+Allow: /
+Disallow: /app
+Disallow: /d/
+
+Sitemap: https://diagflo.yashvardhan.dev/sitemap.xml

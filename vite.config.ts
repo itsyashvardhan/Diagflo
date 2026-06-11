@@ -242,8 +242,10 @@ export default defineConfig(({ mode }) => {
       sourcemap: false,
       rollupOptions: {
         output: {
-          manualChunks: {
-            vendor: ["react", "react-dom"],
+          manualChunks(id) {
+            if (id.includes("node_modules/react/") || id.includes("node_modules/react-dom/")) {
+              return "vendor";
+            }
           },
           chunkFileNames: "assets/[hash].js",
           entryFileNames: "assets/[hash].js",

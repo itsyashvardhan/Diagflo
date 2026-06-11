@@ -290,6 +290,33 @@ g.edgeLabel rect {
   rx: 4px;
 }
 
+/* Glassmorphic dark-mode overrides for Mermaid diagrams to enforce premium contrast and aesthetic */
+.dark g.cluster rect {
+  fill: hsl(240 10% 8% / 0.4) !important;
+  stroke: hsl(240 10% 30% / 0.4) !important;
+  backdrop-filter: blur(8px);
+}
+
+.dark g.cluster .label text,
+.dark g.cluster .label span,
+.dark g.cluster .label {
+  fill: hsl(210 40% 98%) !important;
+  color: hsl(210 40% 98%) !important;
+}
+
+.dark g.node rect {
+  fill: hsl(240 10% 12% / 0.7) !important;
+  stroke: hsl(240 10% 35% / 0.5) !important;
+  backdrop-filter: blur(8px);
+}
+
+.dark g.node .label text,
+.dark g.node .label span,
+.dark g.node .label {
+  fill: hsl(210 40% 98%) !important;
+  color: hsl(210 40% 98%) !important;
+}
+
 /* Respect user's motion preferences - WCAG 2.1 */
 @media (prefers-reduced-motion: reduce) {
   *,

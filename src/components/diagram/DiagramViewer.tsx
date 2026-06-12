@@ -15,9 +15,10 @@ interface DiagramViewerProps {
   zoom?: number;
   onWheelZoom?: (newZoom: number, centerX?: number, centerY?: number) => void;
   prompt?: string;
+  onRenderSuccess?: () => void;
 }
 
-function DiagramViewerInternal({ code, theme = "default", zoom = 1, onWheelZoom, prompt }: DiagramViewerProps) {
+function DiagramViewerInternal({ code, theme = "default", zoom = 1, onWheelZoom, prompt, onRenderSuccess }: DiagramViewerProps) {
   const containerRef = useRef<HTMLDivElement>(null);
   const [error, setError] = useState<string | null>(null);
   const [isLoading, setIsLoading] = useState(false);
@@ -54,6 +55,9 @@ function DiagramViewerInternal({ code, theme = "default", zoom = 1, onWheelZoom,
 
       await renderDiagram(code, "diagram-svg-container", theme);
       setRetryCount(0);
+      if (onRenderSuccess) {
+        setTimeout(onRenderSuccess, 50);
+      }
     } catch (err) {
       logger.error("Diagram render error", err);
       const errorMessage = err instanceof Error ? err.message : "Failed to render diagram";
@@ -62,7 +66,7 @@ function DiagramViewerInternal({ code, theme = "default", zoom = 1, onWheelZoom,
     } finally {
       setIsLoading(false);
     }
-  }, [code, theme]);
+  }, [code, theme, onRenderSuccess]);
 
   useEffect(() => {
     render();

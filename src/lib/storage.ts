@@ -75,7 +75,6 @@ export const storage = {
     return {
       ...defaults,
       ...parsed,
-      geminiModel: "gemini-2.5-flash-lite",
     };
   },
 

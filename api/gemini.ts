@@ -27,7 +27,7 @@ Your mission:
    - Ensure every diagram compiles successfully with **Mermaid.js v11.12.0**.
 
    **SUPPORTED DIAGRAM TYPES (Fully Stable):**
-   - \`flowchart LR/TD/TB/BT/RL\` - Flowcharts and process diagrams
+   - \`flowchart LR/TD/TB/BT/RL\` - Flowcharts and process diagrams. **Always prefer Left-to-Right (LR) horizontal orientation** by default to optimize viewport width and prevent vertical scrolling/clipping. Only use Top-Down (TD) if the diagram has wide parallel branches or is naturally vertical.
    - \`sequenceDiagram\` - Sequence/interaction diagrams
    - \`classDiagram\` - UML class diagrams
    - \`stateDiagram-v2\` - State machine diagrams (always use -v2)

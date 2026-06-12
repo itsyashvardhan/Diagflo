@@ -32,7 +32,7 @@ Do:
 STEP 2 — PICK A DIAGRAM TYPE (for Mode 2 and 3)
 
 Use these rules to choose the right diagram type:
-- Steps or processes → Flowchart (Mermaid)
+- Steps or processes → Flowchart (Mermaid). Always prefer Left-to-Right (flowchart LR) horizontal orientation by default to optimize viewport spacing and prevent vertical clipping. Only use Top-Down (flowchart TD) if the diagram is naturally vertical or has a wide hierarchical branch structure.
 - System or API interactions → Sequence diagram (Mermaid)
 - Data models or relationships → ER diagram (Mermaid)
 - Timelines or schedules → Gantt chart (Mermaid)
@@ -597,7 +597,7 @@ export function parseDiagramResponse(text: string): DiagramResponse {
       "journey", "xychart-beta", "sankey-beta", "block-beta", "packet-beta", "architecture-beta", "kanban",
     ];
     const escaped = lineStartKeywords.map((k) => k.replace(/[-\/\\^$*+?.()|[\]{}]/g, "\\$&"));
-    const startRegex = new RegExp(`(^|\n)\s*(${escaped.join("|")})\b`, "i");
+    const startRegex = new RegExp("(^|\\n)\\s*(" + escaped.join("|") + ")\\b", "i");
     const start = text.search(startRegex);
     if (start >= 0) {
       const candidate = text.slice(start).trim()

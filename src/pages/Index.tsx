@@ -978,6 +978,7 @@ const Index = () => {
                   zoom={zoom}
                   onWheelZoom={handleWheelZoom}
                   prompt={diagramHistory[historyIndex]?.prompt}
+                  onRenderSuccess={handleFitToScreen}
                 />
               </div>
             </section>

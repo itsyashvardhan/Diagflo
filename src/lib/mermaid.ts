@@ -20,6 +20,11 @@ export const getMermaidConfig = (theme: MermaidTheme): MermaidConfig => {
         tertiaryColor: "#c084fc",
         fontSize: "16px",
         fontFamily: "Manrope, system-ui, sans-serif",
+        clusterBkg: "#f5f3ff",
+        clusterBorder: "#e9d5ff",
+        nodeBkg: "#ffffff",
+        nodeBorder: "#d8b4fe",
+        titleColor: "#1e1b4b",
       },
     },
     forest: {
@@ -31,6 +36,11 @@ export const getMermaidConfig = (theme: MermaidTheme): MermaidConfig => {
         lineColor: "#6ee7b7",
         fontSize: "16px",
         fontFamily: "Manrope, system-ui, sans-serif",
+        clusterBkg: "#f0fdf4",
+        clusterBorder: "#bbf7d0",
+        nodeBkg: "#ffffff",
+        nodeBorder: "#86efac",
+        titleColor: "#064e3b",
       },
     },
     dark: {
@@ -43,6 +53,11 @@ export const getMermaidConfig = (theme: MermaidTheme): MermaidConfig => {
         lineColor: "#a78bfa",
         fontSize: "16px",
         fontFamily: "Manrope, system-ui, sans-serif",
+        clusterBkg: "#1e1b4b",
+        clusterBorder: "#4c1d95",
+        nodeBkg: "#1f2937",
+        nodeBorder: "#374151",
+        titleColor: "#f9fafb",
       },
     },
     neutral: {
@@ -54,6 +69,11 @@ export const getMermaidConfig = (theme: MermaidTheme): MermaidConfig => {
         lineColor: "#94a3b8",
         fontSize: "16px",
         fontFamily: "Manrope, system-ui, sans-serif",
+        clusterBkg: "#f8fafc",
+        clusterBorder: "#e2e8f0",
+        nodeBkg: "#ffffff",
+        nodeBorder: "#cbd5e1",
+        titleColor: "#0f172a",
       },
     },
   };
@@ -79,7 +99,7 @@ export const initializeMermaid = async (theme: MermaidTheme = "default") => {
       startOnLoad: false,
       theme: config.theme,
       themeVariables: config.themeVariables,
-      securityLevel: "loose",
+      securityLevel: "sandbox",
       suppressErrorRendering: true, // Suppress error rendering in the diagram
       flowchart: {
         htmlLabels: true,

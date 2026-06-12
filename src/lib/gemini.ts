@@ -58,6 +58,7 @@ RULES
 - Never mention which mode you are using.
 - If the user shares diagram code, treat it as the current diagram.
 - If the user asks to compare two diagrams but only one exists, ask for the missing one.
+- Style instructions: Avoid generating saturated inline styles (like pink/yellow fills). Instead, use professional, low-saturation dark-mode-native colors (e.g., muted slate, dark teal, charcoal) or standard class definitions to ensure contrast.
 `;
 
 // Custom error for rate limiting
@@ -597,7 +598,7 @@ export function parseDiagramResponse(text: string): DiagramResponse {
       "journey", "xychart-beta", "sankey-beta", "block-beta", "packet-beta", "architecture-beta", "kanban",
     ];
     const escaped = lineStartKeywords.map((k) => k.replace(/[-\/\\^$*+?.()|[\]{}]/g, "\\$&"));
-    const startRegex = new RegExp(`(^|\n)\s*(${escaped.join("|")})\b`, "i");
+    const startRegex = new RegExp(`(^|\\n)\\s*(${escaped.join("|")})\\b`, "i");
     const start = text.search(startRegex);
     if (start >= 0) {
       const candidate = text.slice(start).trim()

@@ -911,21 +911,9 @@ const Index = () => {
                   disabled={isGenerating}
                 />
               </div>
-
-              {/* Built-with badge for recruiter-friendly tech validation */}
-              <div className="px-4 sm:px-5 py-1.5 border-t border-white/5 flex items-center justify-center">
-                <a
-                  href="https://github.com/itsyashvardhan/Diagflo"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-[10px] text-muted-foreground/50 hover:text-muted-foreground/80 transition-colors"
-                >
-                  Built with React · Gemini · Mermaid · Vite
-                </a>
-              </div>
             </section>
 
-            {/* Resize handle (desktop only) */}
+            {/* Resize handle (desktop only) */}|
             <div
               role="separator"
               onMouseDown={handleMouseDownResize}
@@ -978,6 +966,7 @@ const Index = () => {
                   zoom={zoom}
                   onWheelZoom={handleWheelZoom}
                   prompt={diagramHistory[historyIndex]?.prompt}
+                  onRenderSuccess={handleFitToScreen}
                 />
               </div>
             </section>
